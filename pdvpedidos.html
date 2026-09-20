@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PDV de Pedidos</title>
+
+<link rel="stylesheet" href="pdv-pedidos.css">
+
+</head>
+<body>
+    <main class="pdv-container">
+
+    <header class="pdv-topo">
+
+        <div>
+            <h1>❄️ PDV de Pedidos</h1>
+            <p id="empresa">Sistema de Climatização</p>
+        </div>
+
+        <button id="botaoVoltar" type="button">
+            Voltar ao Painel
+        </button>
+
+    </header>
+
+
+    <section class="pdv-grid">
+
+        <div class="cadastro-pedido">
+
+            <h2>Novo pedido</h2>
+
+            <label for="clientePedido">
+                Cliente
+            </label>
+
+            <input
+                type="text"
+                id="clientePedido"
+                placeholder="Nome do cliente"
+            >
+
+            <label for="produtoPedido">
+                Produto ou serviço
+            </label>
+
+            <input
+                type="text"
+                id="produtoPedido"
+                placeholder="Produto ou serviço"
+            >
+
+            <label for="quantidadePedido">
+                Quantidade
+            </label>
+
+            <input
+                type="number"
+                id="quantidadePedido"
+                value="1"
+                min="1"
+            >
+
+            <label for="valorPedido">
+                Preço
+            </label>
+
+            <input
+                type="number"
+                id="valorPedido"
+                placeholder="Digite o preço"
+                min="0"
+                step="0.01"
+            >
+
+            <button
+                id="botaoAdicionar"
+                type="button"
+            >
+                Adicionar item
+            </button>
+
+        </div>
+
+
+        <div class="pedido-atual">
+
+            <h2>Pedido atual</h2>
+
+            <div id="listaPedido">
+
+                <p>
+                    Nenhum item adicionado.
+                </p>
+
+            </div>
+
+            <div class="total">
+
+                <span>Total:</span>
+
+                <strong id="totalPedido">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+            <button
+                id="botaoFinalizar"
+                type="button"
+            >
+                Finalizar pedido
+            </button>
+
+            <p id="mensagem"></p>
+
+        </div>
+
+    </section>
+
+
+    <section class="historico">
+
+        <h2>Histórico de pedidos</h2>
+
+        <div id="listaHistorico">
+
+            <p>
+                Nenhum pedido realizado ainda.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="pdv-pedidos.js"></script>
+
+</body>
+</html>
